@@ -1,0 +1,6 @@
+runtime: go115
+
+instance_class: F2
+env_variables:
+  NAME: "Husni"
+  PORT: "8080"

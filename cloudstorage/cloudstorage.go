@@ -11,9 +11,9 @@ import (
 	"google.golang.org/appengine"
 )
 
-var (
-	storageClient *storage.Client
-)
+// var (
+// 	storageClient *storage.Client
+// )
 
 //HandleFileUploadToBucket uploads file to bucket
 func HandleFileUploadToBucket(c *gin.Context) {
@@ -23,7 +23,7 @@ func HandleFileUploadToBucket(c *gin.Context) {
 
 	ctx := appengine.NewContext(c.Request)
 
-	storageClient, err := storage.NewClient(ctx, option.WithCredentialsFile("../key/test-golang-sa.json"))
+	storageClient, err := storage.NewClient(ctx, option.WithCredentialsFile("key/test-golang-sa.json"))
 	if err != nil {
 		internalServerErrorHandler(c, err)
 	}
